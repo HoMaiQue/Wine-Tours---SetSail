@@ -164,35 +164,98 @@
         list-style: none;
         align-items: center;
         justify-content: center;
+        margin-top: 14px;
+        padding-left: 0;
     }
 
     &__item {
-        padding: 0 36px;
+        padding: 30px 37px ;
         cursor: pointer;
-        &:first-child  a{
+        &:first-child  .nav__link{
             color: $main_color;
+            font-weight: 700;
         }
-        
-    }
-    &__link {
-        font-size: 1.4rem;
-        text-decoration: none;
-        color: $black_color;
-        font-weight: 700;
-        position: relative;
         &:hover .underline-main-color {
             width: 100%;
-            background-color: $main_color;
+           
         }
+
+        &:hover .nav__link {
+            color: $main_color;
+        }
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $black_color;
+        font-weight: 600;
+        position: relative;
+       
         
     }
     .underline-main-color {
         @include underline;
         background-color: $main_color;
         top: 100%;
+
     }
 
-    
+    .home-dropdown-menu {
+        @include dropdown;
+        &:hover .home-dropdown-menu__list{
+            display: block;
+        }
+        &__item {
+         
+            &:nth-of-type(8) .home-dropdown-menu__link {
+                color: $main_color;
+            }
+        }
+
+    }
+
+    .page-dropdown-menu {
+        @include dropdown;
+        
+        &:hover .page-dropdown-menu__list{
+            display: block;
+        }
+
+    }
+
+    .destination-dropdown-menu {
+        @include dropdown;
+        
+        &:hover .destination-dropdown-menu__list{
+            display: block;
+        }
+
+    }
+
+    .tours-dropdown-menu {
+        @include dropdown;
+        
+        &:hover .tours-dropdown-menu__list{
+            display: block;
+        }
+
+    }
+
+    .blog-dropdown-menu {
+        @include dropdown;
+        
+        &:hover .blog-dropdown-menu__list{
+            display: block;
+        }
+
+    }
+    .underline-nav-color {
+        @include underline;
+        background-color: $main_color;
+        top: 100%;
+        
+    }
 
     
 }

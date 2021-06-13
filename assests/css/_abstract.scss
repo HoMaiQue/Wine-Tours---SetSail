@@ -1,8 +1,54 @@
 @mixin underline {
     width: 0;
-    height: 2.5px;
+    height: 2px;
     position: absolute;
     left: 0;
     transition: width 0.5s ease;
 }
 
+@mixin nav-list {
+    list-style: none;
+            padding-left: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $white_color;
+            padding: 28px 0 30px;
+            width: 257px;
+            display: none;
+}
+
+@mixin nav-padding {
+    padding: 9px 25px 8px 32px;
+}
+
+@mixin nav-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $black_color;
+    font-weight: 500;
+    position: relative;
+}
+
+@mixin dropdown {
+    position: relative;
+   
+
+    &__list {
+        @include nav-list;
+    }
+    &__item {
+       @include nav-padding;
+       
+
+        &:hover .underline-nav-color{
+            width: 100%;
+        }
+        &:hover .home-dropdown-menu__link {
+            color: $main_color;
+        }
+    }
+    &__link {
+        @include nav-link;
+    }
+}
