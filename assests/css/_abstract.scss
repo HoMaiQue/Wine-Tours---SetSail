@@ -4,51 +4,43 @@
     position: absolute;
     left: 0;
     transition: width 0.5s ease;
+    top: 100%;
+}
+@mixin boxshadow {
+    box-shadow: 0 1px 13px 0 rgba(0, 0, 0, 0.03);
 }
 
 @mixin nav-list {
+    @include boxshadow;
     list-style: none;
-            padding-left: 0;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: $white_color;
-            padding: 28px 0 30px;
-            width: 257px;
-            display: none;
+    padding-left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $white_color;
+    width: 257px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-in;
+    visibility: hidden;
 }
 
 @mixin nav-padding {
-    padding: 9px 25px 8px 32px;
+    padding: 9px 25px 10px 32px;
 }
 
 @mixin nav-link {
+    color: $black_color;
     text-decoration: none;
     font-size: 1.4rem;
-    color: $black_color;
     font-weight: 500;
     position: relative;
 }
 
 @mixin dropdown {
     position: relative;
-   
 
     &__list {
         @include nav-list;
-    }
-    &__item {
-       @include nav-padding;
-       
-
-        &:hover .underline-nav-color{
-            width: 100%;
-        }
-        &:hover .home-dropdown-menu__link {
-            color: $main_color;
-        }
-    }
-    &__link {
-        @include nav-link;
     }
 }
