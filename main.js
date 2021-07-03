@@ -33,6 +33,70 @@ dropMenuItems.forEach((item, index) => {
 })
 
 
+//--------------------
+
+const slideBigImgs = document.getElementById('slide-big-img');
+const slideSmallImgs = document.getElementById('slide-small-img');
+
+const leftBtn = document.querySelector('.slider__button-left');
+const rightBtn = document.querySelector('.slider__button-right');
+
+const slideBigImg = document.querySelectorAll('#slide-big-img img');
+const slideSmallImg = document.querySelectorAll('#slide-small-img img');
+
+let index = 0;
+
+let interval = setInterval(run, 5000);
+
+function run() {
+    index++;
+    changeSlide();
+}
+
+function changeSlide() {
+    if (index > slideBigImg.length - 1) {
+        index = 0;
+    } else if (index < 0) {
+        index = slideBigImg.length - 1;
+    }
+    removeOpacity(slideBigImg);
+    removeOpacity(slideSmallImg);
+    slideBigImg[index].classList.add('active');
+    slideSmallImg[index].classList.add('active');
+    slideBigImgs.style.transform = `translateX(${-index * 723}px)`;
+    slideSmallImgs.style.transform = `translateX(${-index * 349}px)`;
+
+}
+
+function removeOpacity(slideImg) {
+    slideImg.forEach(slide => {
+        slide.classList.remove('active');
+    })
+}
+
+function resetInterval() {
+    clearInterval(interval);
+
+    interval = setInterval(run, 5000);
+
+}
+
+rightBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    index++;
+    resetInterval();
+    changeSlide();
+})
+
+
+leftBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    index++;
+    resetInterval();
+    changeSlide();
+})
+
+
 
 
 

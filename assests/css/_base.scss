@@ -2,10 +2,15 @@
     box-sizing: inherit;
 }
 
-html{
+html {
     /* 1 rem = 10px */
     font-size: 62.5%;
     line-height: 1.6rem;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box; 
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container-width {
+    width: 1300px;
+    margin: 0 auto;
 }

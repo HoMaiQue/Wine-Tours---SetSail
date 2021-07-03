@@ -281,6 +281,7 @@
             background-color: $white_color;
             overflow: hidden;
             cursor: default;
+            z-index: 1;
         }
 
         &__title {

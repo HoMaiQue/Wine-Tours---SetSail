@@ -23,6 +23,7 @@
     overflow: hidden;
     transition: height 0.5s ease-in;
     visibility: hidden;
+    z-index: 1;
 }
 
 @mixin nav-padding {

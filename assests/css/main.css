@@ -7,9 +7,14 @@ html {
   /* 1 rem = 10px */
   font-size: 62.5%;
   line-height: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.container-width {
+  width: 1300px;
+  margin: 0 auto;
 }
 
 .grid {
@@ -910,6 +915,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .home-dropdown-menu:hover .home-dropdown-menu__list {
@@ -940,6 +946,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .page-dropdown-menu:hover .page-dropdown-menu__list {
@@ -966,6 +973,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .destination-dropdown-menu:hover .destination-dropdown-menu__list {
@@ -992,6 +1000,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .tours-dropdown-menu:hover .tours-dropdown-menu__list {
@@ -1018,6 +1027,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .blog-dropdown-menu:hover .blog-dropdown-menu__list {
@@ -1044,6 +1054,7 @@ html {
   -webkit-transition: height 0.5s ease-in;
   transition: height 0.5s ease-in;
   visibility: hidden;
+  z-index: 1;
 }
 
 .nav .shop-dropdown-menu:hover .shop-dropdown-menu__list {
@@ -1075,6 +1086,7 @@ html {
   background-color: #ffffff;
   overflow: hidden;
   cursor: default;
+  z-index: 1;
 }
 
 .nav .element-dropdown-menu__title {
@@ -1179,6 +1191,116 @@ html {
   to {
     opacity: 1;
   }
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 668px;
+  position: relative;
+  margin: 0 100px;
+  overflow: hidden;
+}
+
+.slider__wrap {
+  overflow: hidden;
+}
+
+.slider__big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 723px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider__img-big {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  -webkit-transition: opacity 2s linear;
+  transition: opacity 2s linear;
+}
+
+.slider__img-big.active {
+  opacity: 1;
+}
+
+.slider__small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 349px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider__img-small {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.5s linear 0.3s;
+  transition: opacity 0.5s linear 0.3s;
+}
+
+.slider__img-small.active {
+  opacity: 1;
+}
+
+.slider__button {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.slider__button:hover {
+  background-color: #3fd0d4;
+}
+
+.slider__button:hover .slider__button-link {
+  color: #ffffff;
+}
+
+.slider__button-left {
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider__button-right {
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider__button-link {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #3fd0d4;
 }
 
 .app {

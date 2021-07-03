@@ -80,12 +80,12 @@
 
     @for $i from 1 through 12 {
         $width: percentage(1 * $i / 12);
-    
+
         .m-#{$i} {
             flex: 0 0 $width;
             max-width: $width;
         }
-    
+
         .m-o-#{$i} {
             margin-left: $width;
         }
@@ -136,17 +136,16 @@
 
     @for $i from 1 through 12 {
         $width: percentage(1 * $i / 12);
-    
+
         .l-#{$i} {
             flex: 0 0 $width;
             max-width: $width;
         }
-    
+
         .l-o-#{$i} {
             margin-left: $width;
         }
     }
-    
 }
 
 /* Tablet - PC low resolution */
@@ -204,17 +203,14 @@
 
     @for $i from 1 through 12 {
         $width: percentage(1 * $i / 12);
-    
+
         .wide .l-#{$i} {
             flex: 0 0 $width;
             max-width: $width;
         }
-    
+
         .wide .l-o-#{$i} {
             margin-left: $width;
         }
     }
-    
 }
-
-
