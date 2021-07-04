@@ -1203,11 +1203,26 @@ html {
   height: 668px;
   position: relative;
   margin: 0 100px;
-  overflow: hidden;
 }
 
 .slider__wrap {
   overflow: hidden;
+}
+
+.slider__logo {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  height: 189px;
+  opacity: 0;
+}
+
+.slider__logo.active {
+  opacity: 1;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
 }
 
 .slider__big {
@@ -1304,6 +1319,7 @@ html {
 }
 
 .app {
+  overflow: hidden;
   height: 5000px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -41,8 +41,10 @@ const slideSmallImgs = document.getElementById('slide-small-img');
 const leftBtn = document.querySelector('.slider__button-left');
 const rightBtn = document.querySelector('.slider__button-right');
 
-const slideBigImg = document.querySelectorAll('#slide-big-img img');
+const slideBigImg = document.querySelectorAll('#slide-big-img .slider__img-big');
 const slideSmallImg = document.querySelectorAll('#slide-small-img img');
+const slideLogo = document.querySelectorAll('.slider__logo');
+console.log(slideLogo);
 
 let index = 0;
 
@@ -65,6 +67,8 @@ function changeSlide() {
     slideSmallImg[index].classList.add('active');
     slideBigImgs.style.transform = `translateX(${-index * 723}px)`;
     slideSmallImgs.style.transform = `translateX(${-index * 349}px)`;
+    removeOpacity(slideLogo);
+    slideLogo[index].classList.add('active');
 
 }
 

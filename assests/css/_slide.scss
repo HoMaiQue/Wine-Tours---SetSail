@@ -4,11 +4,21 @@
     height: 668px;
     position: relative;
     margin: 0 100px;
-    overflow: hidden;
     &__wrap {
         overflow: hidden;
     }
-
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translateY(-50%) translateX(-50%);
+        height: 189px;
+        opacity: 0;
+    }
+    &__logo.active {
+        opacity: 1;
+        transition: opacity 2s ease;
+    }
     &__big {
         display: flex;
         height: 100%;
