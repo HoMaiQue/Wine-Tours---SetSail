@@ -17,6 +17,11 @@ html {
   margin: 0 auto;
 }
 
+.container-max-width {
+  width: 1300px;
+  margin: 0 auto;
+}
+
 .grid {
   width: 100%;
   display: block;
@@ -1240,13 +1245,13 @@ html {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.5;
-  -webkit-transition: opacity 2s linear;
-  transition: opacity 2s linear;
+  opacity: 0.8;
 }
 
 .slider__img-big.active {
   opacity: 1;
+  -webkit-transition: opacity 1s ease 0.5s;
+  transition: opacity 1s ease 0.5s;
 }
 
 .slider__small {
@@ -1316,6 +1321,102 @@ html {
   text-decoration: none;
   font-size: 2.2rem;
   color: #3fd0d4;
+}
+
+.popular-tours-img {
+  padding-top: 128px;
+}
+
+.popular-tours {
+  padding-top: 114px;
+  width: 635px;
+}
+
+.popular-tours__heading {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4rem;
+  letter-spacing: -2px;
+}
+
+.popular-tours__summary {
+  font-size: 1.7rem;
+  color: #505055;
+  line-height: 3rem;
+  margin: 16px 0 35px;
+}
+
+.popular-tours__title {
+  margin: 30px 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.popular-tours__chart {
+  height: 22px;
+  background-color: #f0ede8;
+  position: relative;
+  width: 100%;
+}
+
+.popular-tours__chart-reality {
+  background-color: #3fd0d4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.popular-tours__chart-reality::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 22px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #3abdc1;
+  z-index: 1;
+}
+
+.popular-tours__chart-reality::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 22px;
+  position: absolute;
+  left: 0;
+  background-color: #3abdc1;
+  z-index: 1;
+}
+
+.popular-tours__chart-reality-country {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.popular-tours__chart-reality-vineYard {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+
+.popular-tours__chart-reality-wineTasting {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
 }
 
 .app {

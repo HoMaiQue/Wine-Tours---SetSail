@@ -1,0 +1,85 @@
+.popular-tours-img {
+    padding-top: 128px;
+}
+.popular-tours {
+    padding-top: 114px;
+    width: 635px;
+
+    &__heading {
+        margin: 0;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 4rem;
+        letter-spacing: -2px;
+    }
+
+    &__summary {
+        font-size: 1.7rem;
+        color: #505055;
+        line-height: 3rem;
+        margin: 16px 0 35px;
+    }
+
+    &__title {
+        margin: 30px 0 12px;
+        display: flex;
+        font-size: 1.4rem;
+        justify-content: space-between;
+        font-weight: 600;
+        color: $black_color;
+    }
+
+    &__chart {
+        height: 22px;
+        background-color: #f0ede8;
+        position: relative;
+        width: 100%;
+    }
+
+    &__chart-reality {
+        background-color: $main_color;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 22px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: $main_deep_color;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 22px;
+            position: absolute;
+            left: 0;
+            background-color: $main_deep_color;
+            z-index: 1;
+        }
+    }
+
+    &__chart-reality-country {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.5s linear;
+    }
+
+    &__chart-reality-vineYard {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.5s linear;
+    }
+    &__chart-reality-wineTasting {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.5s linear;
+    }
+}

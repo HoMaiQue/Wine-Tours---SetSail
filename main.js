@@ -100,6 +100,33 @@ leftBtn.addEventListener('click', (e) => {
     changeSlide();
 })
 
+// --------------------------
+const chartCountry = document.querySelector('.popular-tours__chart-reality-country');
+const chartVineYard = document.querySelector('.popular-tours__chart-reality-vineYard');
+const chartWineTasting = document.querySelector('.popular-tours__chart-reality-wineTasting');
+
+function setIntervalPercent(realWidth, chart) {
+    let initWidth = -1;
+    let interval = setInterval(() => {
+        initWidth++;
+        chart.style.width = `${initWidth}%`;
+        if (initWidth === realWidth) {
+            clearInterval(interval);
+        }
+    }, 30);
+
+
+}
+
+const percentCountry = 75;
+const percentVineYard = 92;
+const percentWineTasting = 86;
+setIntervalPercent(percentCountry, chartCountry);
+setIntervalPercent(percentVineYard, chartVineYard);
+setIntervalPercent(percentWineTasting, chartWineTasting);
+
+
+
 
 
 
