@@ -9,7 +9,18 @@
     align-items: center;
     background-color: $black_color;
     height: 46px;
-
+    &-menu__icon {
+        font-size: 2rem;
+        color: $white_color;
+        margin-right: 28px;
+    }
+    &-logo {
+        line-height: 100%;
+    }
+    &-logo__img {
+        height: 36px;
+        width: 113px;
+    }
     &-contact {
         padding-left: 0;
         margin: 0;

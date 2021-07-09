@@ -1,0 +1,25 @@
+.wine-detail {
+    text-align: center;
+    &__distance {
+        padding: 131px 0 118px;
+    }
+    &__number {
+        font-size: 6.5rem;
+        content: $black_color;
+        font-weight: bold;
+        line-height: 6.5rem;
+        font-weight: 600;
+    }
+    &__title {
+        font-size: 1.8rem;
+        color: $black_color;
+        margin: 13px 0 0;
+        font-weight: 600;
+    }
+    &__subtitle {
+        font-size: 1.4rem;
+        color: #505050;
+        line-height: 2.5rem;
+        margin: 11px 0 0;
+    }
+}

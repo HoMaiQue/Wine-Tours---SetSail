@@ -1,0 +1,174 @@
+/* mobile and tablet */
+@media (max-width: 63.9375em) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+    .bar {
+        background-color: $main_color;
+        height: 69px;
+        margin: 0 auto;
+        z-index: 10000;
+        padding: 0 84px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $white_color;
+        border-bottom: 1px solid #ebebeb;
+        transform: translateY(-300px);
+        z-index: -1;
+        transition: transform 1s ease;
+        height: 290px;
+        overflow: auto;
+        &.active {
+            transform: translateY(0);
+        }
+        &__list {
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__item {
+            padding: 11.5px 0;
+            border-bottom: 1px solid #ebebeb;
+        }
+    }
+    .popular-tours-img {
+        padding: 70px 0 41px;
+    }
+
+    .popular-tours {
+        padding-top: 0;
+    }
+
+    .wine-detail {
+        padding-bottom: 40px;
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .slider {
+        width: 600px;
+        height: 335px;
+        margin-top: 119px;
+        &__logo {
+            width: 274px;
+            height: 120px;
+        }
+        &__big {
+            width: 384px;
+            height: 100%;
+        }
+
+        &__small {
+            width: 186px;
+            height: 100%;
+        }
+    }
+
+    .single-picture {
+        width: 600px;
+        margin: 0 auto;
+        & img {
+            width: 100%;
+        }
+    }
+    .popular-tours {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .popular-tours-img {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+/* mobile */
+@media (max-width: 46.1875em) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .slider {
+        width: 300px;
+        display: block;
+        margin-top: 119px;
+        &__logo {
+            width: 237px;
+            height: 104px;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &__big {
+            width: 300px;
+            height: 365px;
+            margin-bottom: 30px;
+        }
+
+        &__small {
+            width: 300px;
+            height: 100%;
+        }
+    }
+
+    .bar {
+        padding: 0 57px;
+    }
+    .single-picture {
+        width: 300px;
+        margin: 0 auto;
+        & img {
+            width: 100%;
+        }
+    }
+    .popular-tours {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .popular-tours-img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .popular-tours-img img {
+        width: 300px;
+    }
+
+    .nav__list {
+        width: 300px;
+    }
+
+    .the-best-tour {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .the-best-location {
+        margin: 0 auto 30px;
+    }
+}
+
+@media (min-width: 64em) {
+    .hide-on-laptop {
+        display: none;
+    }
+}

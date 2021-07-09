@@ -1,0 +1,33 @@
+.travel-video {
+    position: relative;
+
+    &-img {
+    }
+    &__link {
+    }
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 25px;
+        border-radius: 50px;
+        background-color: $main_color;
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+        color: $white_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
