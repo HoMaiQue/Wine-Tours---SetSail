@@ -13,6 +13,7 @@
         font-size: 2rem;
         color: $white_color;
         margin-right: 28px;
+        cursor: pointer;
     }
     &-logo {
         line-height: 100%;
@@ -190,9 +191,9 @@
             font-weight: 700;
         }
 
-        &:hover .underline-main-color {
-            width: 100%;
-        }
+        // &:hover .underline-main-color {
+        //     width: 100%;
+        // }
 
         &:hover .nav__link {
             color: $main_color;
@@ -212,13 +213,12 @@
         background-color: $main_color;
     }
 
+    &__dropdown-menu-list {
+        @include nav-list;
+    }
     .home-dropdown-menu {
-        @include dropdown;
+        position: relative;
 
-        &:hover .home-dropdown-menu__list {
-            height: 409px;
-            visibility: visible;
-        }
         .dropdown-menu__item {
             &:nth-of-type(8) .dropdown-menu__link {
                 color: $main_color;
@@ -226,57 +226,15 @@
         }
     }
 
-    .page-dropdown-menu {
-        @include dropdown;
-
-        &:hover .page-dropdown-menu__list {
-            height: 339px;
-            visibility: visible;
-        }
-    }
-
-    .destination-dropdown-menu {
-        @include dropdown;
-
-        &:hover .destination-dropdown-menu__list {
-            height: 164px;
-            visibility: visible;
-        }
-    }
-
-    .tours-dropdown-menu {
-        @include dropdown;
-
-        &:hover .tours-dropdown-menu__list {
-            height: 199px;
-            visibility: visible;
-        }
-    }
-
-    .blog-dropdown-menu {
-        @include dropdown;
-
-        &:hover .blog-dropdown-menu__list {
-            height: 164px;
-            visibility: visible;
-        }
-    }
-
+    .page-dropdown-menu,
+    .destination-dropdown-menu,
+    .tours-dropdown-menu,
+    .blog-dropdown-menu,
     .shop-dropdown-menu {
-        @include dropdown;
-
-        &:hover .shop-dropdown-menu__list {
-            height: 199px;
-            visibility: visible;
-        }
+        position: relative;
     }
 
     .element-dropdown-menu {
-        &:hover .element-dropdown-menu__all-list {
-            height: 461px;
-            visibility: visible;
-        }
-
         &__all-list {
             @include boxshadow;
             display: flex;
@@ -302,7 +260,7 @@
             cursor: pointer;
             &-link {
                 position: relative;
-                color: $main-color;
+                color: $main-color !important;
                 font-size: 1.2rem;
                 text-decoration: none;
                 font-weight: 700;

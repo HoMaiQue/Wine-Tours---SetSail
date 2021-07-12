@@ -1,35 +1,106 @@
-const dropdownSubMenus = document.querySelectorAll('.dropdown-submenu');
-const blogDropdownMenu__lists = document.querySelectorAll('.dropdown-menu__list');
-dropdownSubMenus.forEach((dropdownSubMenu, index) => {
-    dropdownSubMenu.addEventListener('mouseenter', () => {
-        blogDropdownMenu__lists[Math.trunc(index / 2)].style.overflow = 'visible';
+const navItems = document.querySelectorAll('.nav__item');
+
+function dropdownMenu() {
+    const windowWidth = window.innerWidth;
+    const navDropdown = document.querySelectorAll('.nav__dropdown-menu-list');
+    const underlineMainColors = document.querySelectorAll('.underline-main-color');
+    const dropMenuItems = document.querySelectorAll('.dropdown-menu__item');
+    const dropMenuLinks = document.querySelectorAll('.dropdown-menu__link');
+    const underlineNavColor = document.querySelectorAll('.underline-nav-color');
+    const dropdownSubMenus = document.querySelectorAll('.dropdown-submenu');
+    const blogDropdownMenu__lists = document.querySelectorAll('.dropdown-menu__list');
+    const barButton = document.querySelector('.bar-menu');
+    const nav = document.querySelector('.nav')
+    console.log(navItems);
+    dropMenuItems.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => {
+            dropMenuLinks[index].style.color = '#3fd0d4';
+        })
     })
-})
 
-dropdownSubMenus.forEach((dropdownSubMenu, index) => {
-    dropdownSubMenu.addEventListener('mouseleave', () => {
-        blogDropdownMenu__lists[Math.trunc(index / 2)].style.overflow = 'hidden';
+    dropMenuItems.forEach((item, index) => {
+        item.addEventListener('mouseleave', () => {
+            dropMenuLinks[index].style.color = '#1c1c1c';
+        })
     })
-})
 
-const dropMenuItems = document.querySelectorAll('.dropdown-menu__item');
-const dropMenuLinks = document.querySelectorAll('.dropdown-menu__link');
-const underlineNavColor = document.querySelectorAll('.underline-nav-color')
+    if (windowWidth > 768) {
+        navItems.forEach((navItem, index) => {
+            navItem.addEventListener('mouseenter', () => {
+                const heightDropMenu = navDropdown[index].getAttribute('height');
+                navDropdown[index].style.height = heightDropMenu + 'px';
+                navDropdown[index].style.visibility = 'visible';
+                underlineMainColors[index].style.width = '100%';
+            })
+        })
 
-dropMenuItems.forEach((item, index) => {
-    item.addEventListener('mouseenter', () => {
-        dropMenuLinks[index].style.color = '#3fd0d4';
-        underlineNavColor[index].style.width = '100%';
-    })
-})
+        navItems.forEach((navItem, index) => {
+            navItem.addEventListener('mouseleave', () => {
+                navDropdown[index].style.height = '0px';
+                navDropdown[index].style.visibility = 'hidden';
+                underlineMainColors[index].style.width = '0';
 
-dropMenuItems.forEach((item, index) => {
-    item.addEventListener('mouseleave', () => {
-        dropMenuLinks[index].style.color = '#1c1c1c';
-        underlineNavColor[index].style.width = '0';
+            })
+        })
 
-    })
-})
+        dropMenuItems.forEach((item, index) => {
+            item.addEventListener('mouseenter', () => {
+                underlineNavColor[index].style.width = '100%';
+            })
+        })
+
+        dropMenuItems.forEach((item, index) => {
+            item.addEventListener('mouseleave', () => {
+                underlineNavColor[index].style.width = '0';
+            })
+        })
+
+        dropdownSubMenus.forEach((dropdownSubMenu, index) => {
+            dropdownSubMenu.addEventListener('mouseenter', () => {
+                blogDropdownMenu__lists[Math.trunc(index / 2)].style.overflow = 'visible';
+            })
+        })
+
+        dropdownSubMenus.forEach((dropdownSubMenu, index) => {
+            dropdownSubMenu.addEventListener('mouseleave', () => {
+                blogDropdownMenu__lists[Math.trunc(index / 2)].style.overflow = 'hidden';
+            })
+        })
+    } else {
+        barButton.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        })
+        const navActive = document.querySelector('.nav.active')
+        navItems.forEach((navItem, index) => {
+
+            navItem.addEventListener('click', (e) => {
+                e.preventDefault();
+                let subMenu = navItem.querySelector('.nav__dropdown-menu-list');
+                const height = subMenu.getAttribute('height');
+                let realHeight = subMenu.style.height;
+                console.log(realHeight);
+                if (realHeight) {
+                    console.log(1);
+                    subMenu.style.height = '';
+                    nav.style.height = '290px';
+                    nav.style.overflow = 'hidden';
+
+                } else {
+                    console.log(2);
+                    subMenu.style.height = `${height}px`;
+                    nav.style.height = '340px';
+                    nav.style.overflowY = 'auto';
+
+                }
+                subMenu.classList.toggle('active');
+
+            })
+        })
+    }
+
+}
+
+dropdownMenu();
 //--------------------
 const slideBigImgs = document.getElementById('slide-big-img');
 const slideSmallImgs = document.getElementById('slide-small-img');
@@ -56,7 +127,6 @@ function changeSlide() {
     } else if (index < 0) {
         index = slideBigImg.length - 1;
     }
-
 
     removeOpacity(slideBigImg);
     removeOpacity(slideSmallImg);
@@ -166,11 +236,22 @@ window.addEventListener('scroll', runNumber);
 
 // 
 
-const barButton = document.querySelector('.bar-menu');
 
-const nav = document.querySelector('.nav');
-barButton.addEventListener('click', () => {
-    nav.classList.toggle('active');
+
+
+// 
+const play = document.querySelector('.travel-video');
+const video = document.querySelector('.app__video');
+const iframe = document.querySelector('.app__iframe');
+play.addEventListener('click', (e) => {
+    e.preventDefault();
+    video.classList.add('active');
+    iframe.src = 'https://player.vimeo.com/video/127347999';
+})
+
+video.addEventListener('click', (e) => {
+    video.classList.remove('active');
+    iframe.src = '';
 
 })
 

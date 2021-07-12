@@ -38,10 +38,4 @@
     position: relative;
 }
 
-@mixin dropdown {
-    position: relative;
 
-    &__list {
-        @include nav-list;
-    }
-}

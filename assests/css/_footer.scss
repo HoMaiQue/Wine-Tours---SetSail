@@ -1,0 +1,148 @@
+.footer {
+    padding: 106px 0 18px;
+    background-color: $black_color;
+    &__detail{
+        padding-bottom: 60px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $white_color;
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $main_color;
+        }
+    }
+    &__logo {
+        width: 263px;
+        height: 84px;
+    }
+    &__intro {
+        font-size: 1.7rem;
+        color: $gray_color;
+        line-height: 2.7rem;
+        margin-bottom: 22px;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        color: $white_color;
+        margin: 0 0 26px;
+    }
+    &__address {
+        display: flex;
+        flex-direction: column;
+        line-height: 3rem;
+        margin-bottom: 20px;
+    }
+    &__location {
+        color: $gray_color;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $main_color;
+        }
+    }
+    &__time {
+        font-size: 1.4rem;
+        color: $white_color;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $main_color;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.4rem;
+        color: $gray_color;
+        line-height: 2.5rem;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    &__sub {
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrap {
+        position: relative;
+        margin-bottom: 6px;
+    }
+    &__input {
+        width: 100%;
+        color: $white_color;
+        outline: none;
+        border: none;
+        background-color: #ffffff40;
+        padding: 19px 16px 19px 47px;
+        font-size: 1.4rem;
+        &::placeholder {
+            color: $white_color;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        font-size: 1.4rem;
+        color: $white_color;
+        line-height: 1.4rem;
+    }
+    &__button {
+        color: $white_color;
+        text-transform: uppercase;
+        background-color: $main_color;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        padding: 19px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        outline: none;
+        border: none;
+        &:hover {
+            background-color: $white_color;
+            color: $black_color;
+        }
+    }
+
+   
+}
+
+.footer-bottom {
+   
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black_color;
+        height: 68px;
+        font-size: 1.4rem;
+    }
+    &__copyright-provide {
+        color: $gray_color;
+        margin: 0;
+    }
+    &__copyright-name {
+        color: $white_color;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $main_color;
+        }
+    }
+}

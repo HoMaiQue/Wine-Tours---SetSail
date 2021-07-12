@@ -1,0 +1,35 @@
+.pupular-tour-custom {
+    padding: 155px 0 63px;
+    &__heading {
+        font-size: 4rem;
+        color: $black_color;
+        font-weight: 600;
+        line-height: 4rem;
+        margin: 0;
+    }
+    &__subheading {
+        font-size: 1.7rem;
+        color: #505050;
+        margin: 18px 0 0;
+        line-height: 2.8rem;
+    }
+}
+
+.travel-custom {
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px;
+
+    &__intro {
+        width: 265px;
+        font-size: 1.4rem;
+        padding-left: 30px;
+        color: #505050;
+        margin: 0;
+        line-height: 2.4rem;
+    }
+}
+
+.custom-single-img {
+    padding: 143px 0 144px 110px;
+}
